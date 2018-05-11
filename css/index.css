@@ -1,0 +1,75 @@
+@charset "UTF-8";
+* { padding: 0; margin: 0; }
+
+html, body { font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif; min-height: 100%; }
+
+input, button { border: none; padding: 0; vertical-align: bottom; outline: none; }
+
+img { vertical-align: middle; border: 0; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; color: #ccc; }
+
+i, cite, em, var, address, dfn { font-style: normal; }
+
+.fl { float: left; }
+
+.fr { float: right; }
+
+.clearfix:before, .clearfix:after { /*清除浮动，最好最标准的写法*/ content: ""; display: table; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { *zoom: 1; /*IE/7/6*/ /*兼容IE6下的写法*/ }
+
+/* 创建动画*/
+@-webkit-keyframes amt { 0% { -webkit-transform: translateZ(0) rotate(0deg); transform: translateZ(0) rotate(0deg); }
+  100% { -webkit-transform: translateZ(0) rotate(360deg); transform: translateZ(0) rotate(360deg); } }
+@keyframes amt { 0% { -webkit-transform: translateZ(0) rotate(0deg); transform: translateZ(0) rotate(0deg); }
+  100% { -webkit-transform: translateZ(0) rotate(360deg); transform: translateZ(0) rotate(360deg); } }
+.red { color: #EC401E; }
+
+.green { color: #1dbf60; }
+
+html { position: relative; min-height: 100%; }
+
+.bold { font-weight: bold; }
+
+li .bold { line-height: 1.6; }
+
+.bgc { background-color: #121323; position: absolute; z-index: -2; width: 100%; height: 100%; }
+
+.main { width: 750px; margin: 0 auto; }
+
+.head-box { background-color: #FFF; filter: alpha(opacity=10); -moz-opacity: 0.1; background-color: rgba(255, 255, 255, 0.1); }
+.head-box .head { width: 100%; max-width: 960px; margin: 0 auto; color: #fff; padding: 25px 44px 0 44px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.head-box .head .h_l { text-align: center; width: 298px; }
+.head-box .head .h_l .name { font-size: 32px; }
+.head-box .head .h_l .xianjia { font-size: 56px; }
+.head-box .head .h_l .zhangdie, .head-box .head .h_l .zhangfu { font-size: 28px; margin-left: 22px; }
+.head-box .head .h_l .time { font-size: 20px; }
+.head-box .head .h_r { margin-left: 310px; border-left: 1px solid white; }
+.head-box .head .h_r li { float: left; width: 20%; margin-left: 12%; margin-bottom: 5px; font-size: 30px; }
+.head-box .head .h_b { margin-top: 16px; border-top: 1px solid white; padding-top: 8px; }
+.head-box .head .h_b ul { margin-top: 4px; }
+.head-box .head .h_b li { width: 20%; margin-left: 4%; font-size: 26px; float: left; }
+
+.content { width: 100%; max-width: 960px; margin: 0 auto; position: relative; }
+.content .roll { position: absolute; top: -115px; text-align: center; width: 100%; z-index: -2; }
+.content .roll img { width: 100%; -webkit-animation: amt 9s infinite linear; animation: amt 9s infinite linear; }
+.content > img { width: 100%; }
+.content .online { font-size: 34px; text-align: center; color: #2571db; }
+.content .online span { color: #ffc600; }
+.content .phone-box, .content .btn-box { margin-top: 30px; position: relative; text-align: center; color: #fff; }
+.content .phone-box .phone-bg, .content .phone-box .btn-bg, .content .btn-box .phone-bg, .content .btn-box .btn-bg { position: absolute; top: 0; width: 100%; text-align: center; z-index: 0; }
+.content .phone-box .phone-bg img, .content .phone-box .btn-bg img, .content .btn-box .phone-bg img, .content .btn-box .btn-bg img { width: 85%; }
+.content .phone-box .phone, .content .btn-box .phone { position: relative; background: transparent; display: block; width: 85%; height: 99px; margin: 0 auto; padding: 10px; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 30px; text-align: center; }
+.content .phone-box .btn-text, .content .btn-box .btn-text { font-size: 40px; line-height: 107px; color: #fff; cursor: pointer; font-weight: bold; text-align: center; position: relative; letter-spacing: 1px;}
+.content .phone-box .btn-text span, .content .btn-box .btn-text span { color: #ffc600; }
+
+.footer{ margin: 80px 0 10px; text-align: center; color: #306bb5; font-size:14px;line-height:23px;}
+.ts{z-index:9999;display:none;position: absolute;top:-60px;left:100px;width:541px;height:132px;}
+.ts .tsBg{width:541px;height:132px;background:url(../images/tc1.png) 50% 50% no-repeat;background-size:541px 132px;}
+.ts .tsBg .tsCloseBox{width:40px;height:40px;padding:25px 0px 0 465px;}
+.ts .tsBg .tsCloseBox .tsClose{width:40px;height:40px;}

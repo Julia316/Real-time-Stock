@@ -1,0 +1,66 @@
+/*弹窗  */  
+.winfixed{
+  display:none;
+  position:fixed;
+  background:rgba(0, 0, 0, 0.7);
+  top: 0;
+  height:100%;  
+  width:100%;
+  left:0;
+  text-align:center;
+  }
+.winfixed .winwrap{
+  width:690px;
+  height:795px;
+  margin: 0 auto;
+  position: relative;
+  top: 12%;
+  text-align: center; 
+  }
+.winfixed .winwrap .tc01{
+  width:100%;
+  height:795px;
+  background:url(../images/tc_01.png) 50% 50% no-repeat;
+  background-size:100% 795px;
+  }
+.winfixed .winwrap .tc01 .byBox{
+  width:50px;
+  height:50px;
+  padding:0px 0 0 636px;
+  }
+.winfixed .winwrap .tc01 .byBox .by{
+  width:50px;
+  height:50px;
+  } 
+.nameBox,
+.wxh{
+	padding-top:20px;
+	font-size:31px;
+	color:#000;
+	text-align:center;
+	width:690px;
+	margin:0 auto;
+}
+#name{
+  padding:0 5px;
+} 
+.p1{
+	width:100%;
+	padding-top:22px;
+	font-size:31px;
+	text-align:center;
+	color:#f90e0e;
+	font-weight:800;
+}
+.wxh span{
+	font-weight:800;
+}
+.qrBox{
+	width:366px;
+	height:366px;
+	margin:30px auto 0;	
+}
+.qrBox img{
+	width:366px;
+	height:366px;
+}

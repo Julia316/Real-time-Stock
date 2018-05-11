@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800, user-scalable=no, target-densitydpi=device-dp">
+  <meta content="ie=edge">
+  <title>大数据诊股神器</title>
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/tc.css" rel="stylesheet">
+  <script id="stockFunction" defer></script>
+</head>
+
+<body>
+  <div class="bgc"></div>
+  <div class="main">
+    <!--头部-->
+    <div class="head-box">
+      <div class="head">
+        <div class="h_l fl">
+          <div class="name"><span class="gpname bold" id="data_name">加载中..</span><span class="gcode" id="data_code">加载中..</span></div>
+          <div><span class="items-10 xianjia bold" id="data_xianjia">加载中..</span></div>
+          <div><span class="items-264648 zhangdie" id="data_zhangdie">加载中..</span><span class="items-199112 zhangfu" id="data_zhangdiefu">加载中..</span></div>
+          <div class="time"><span class="date"></span></div>
+        </div>
+        <div class="h_r clearfix">
+          <ul>
+            <li>
+              <div class="bold">今开</div>
+              <div class="items-7" id="data_jinkai">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">最高</div>
+              <div class="items-8 red" id="data_zuigao">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">涨停</div>
+              <div class="items-69 red" id="data_zhangting">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">昨收</div>
+              <div class="items-6" id="data_zuoshou">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">最低</div>
+              <div class="items-9 green" id="data_zuidi">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">跌停</div>
+              <div class="items-70 green" id="data_dieting">加载中..</div>
+            </li>
+          </ul>
+        </div>
+        <div class="h_b clearfix">
+          <ul class="clearfix">
+            <li>
+              <div class="bold">成交量</div>
+              <div class="items-13" id="data_chengjiaoliang">1553.52万</div>
+            </li>
+            <li>
+              <div class="bold">成交额</div>
+              <div class="items-19" id="data_chengjiaoe">1.26亿</div>
+            </li>
+            <li>
+              <div class="bold">流通市值</div>
+              <div class="items-3475914" id="data_liutongshizhi">72.77亿</div>
+            </li>
+            <li>
+              <div class="bold">市盈率</div>
+              <div class="items-2034120" id="data_shiyinglv">6.60</div>
+            </li>
+          </ul>
+          <ul class="clearfix">
+            <li>
+              <div class="bold">换手率</div>
+              <div class="items-1968584" id="data_huanshoulv">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">振幅</div>
+              <div class="items-526792" id="data_zhenfu">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">总市值</div>
+              <div class="items-3541450" id="data_zongshizhi">加载中..</div>
+            </li>
+            <li>
+              <div class="bold">市净率</div>
+              <div class="items-592920" id="data_shijinglv">加载中..</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--主体内容-->
+    <div class="content">
+      <div class="roll">
+        <img src="images/roll.png" alt="">
+      </div>
+      <img src="images/body.png" alt="">
+      <p class="online">累计在线诊股<span>3568</span>次，是去是留，<span>一测便知</span></p>
+      <div class="phone-box">
+        <div class="phone-bg"> <img src="./images/inputBg2.png" alt=""></div>
+        <input onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" type="text" class="phone" id="phone" placeholder="请输入股票代码，例 000001" maxlength="6"/>
+      </div>
+      <div class="btn-box" id="ymBtn">
+        <div class="btn-bg"><img src="./images/btnBg2.png" alt=""></div>
+        <p class="btn-text">领取测评结果</p>
+        <div class="ts" id="ts">
+        	 <div class="tsBg">
+        	 	   <div class="tsCloseBox" id="tsCloseBox">
+        	 	   	  <div class="tsClose" id="tsClose"></div>
+        	 	   </div>
+        	 </div>
+        </div>        
+      </div>
+    </div>
+    <div class="footer">
+      <p>投资有风险，选择需谨慎。风险责任由购买者自行承担 </p>
+      <p>本产品属于高风险高收益品种；投资者应具有较高的风险识别能力，资金实力与风险承受能力。</p>
+      <p>投资者应合理配置资产，不应用全部资金做投资，不应借钱投资。</p>
+
+    </div>
+  </div>
+  
+	  <div class="winfixed" id="teleTc">
+			<div class="winwrap">
+				<div class="tc01">
+					<div class="byBox"><div class="by" id="by"></div></div>					
+          <div class="nameBox">您查询的股票 <span id="name">000000</span> 已发往研究部整合</div>
+          <div class="p1">免费获取诊断报告（附操作策略）</div>
+          <div class="wxh">请长按识别二维码，添加微信  <span class="qq-groupNo" onclick="ga('send','event', createUrlStr(),'长按复制微信号')">XXXXXXXX</span></div>
+          <div class="qrBox">
+          	<img class="qq-link" onclick="ga('send','event', createUrlStr(),'长按识别二维码')" src="images/XXXXXX.jpg"/>
+          </div>
+				</div>
+			</div>
+	  </div>
+ 
+	  <input id="refererUrl" value="//win.chaochaojin.com/wap/20171017zgwx/index.html" type="hidden">
+</body>
+<script type="text/javascript" src="//www.98.cn/common/jquery-1.72.js"></script>
+<script type="text/javascript" src="//www.98.cn/common/RandwxByBid.js"></script>
+<script type="text/javascript" src="//www.98.cn/common/CCjCountCode.js"></script>
+<script src="js/moment.js"></script>   <!--日期处理类库-->
+<script src="js/stock.js" ></script>
+<script type="text/javascript" src="js/new_file.js" ></script>
+
+<script>
+	var oYmBtn=document.getElementById("ymBtn");
+  var oTeleTc=document.getElementById("teleTc");
+  var oPhone=document.getElementById("phone");
+  var oName=document.getElementById("name");
+  var oBy=document.getElementById("by");
+	oYmBtn.onclick=function(){
+		  if(oPhone.value=="" || oPhone.value.length<=5){
+		  	alert("请输入股票代码，例 000001")
+		  }else{
+        oTeleTc.style.display="block";
+        oName.innerHTML=oPhone.value;
+		  }
+	}
+	oBy.onclick=function(){
+		  oTeleTc.style.display="none";
+	}
+</script>
+</html>
